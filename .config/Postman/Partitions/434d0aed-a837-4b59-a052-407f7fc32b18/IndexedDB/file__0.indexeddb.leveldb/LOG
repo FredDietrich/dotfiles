@@ -1,0 +1,6 @@
+2022/12/10-19:05:30.040 253c0 Reusing MANIFEST /home/dietrich/.config/Postman/Partitions/434d0aed-a837-4b59-a052-407f7fc32b18/IndexedDB/file__0.indexeddb.leveldb/MANIFEST-000001
+2022/12/10-19:05:30.040 253c0 Recovering log #6
+2022/12/10-19:05:30.074 253c0 Reusing old log /home/dietrich/.config/Postman/Partitions/434d0aed-a837-4b59-a052-407f7fc32b18/IndexedDB/file__0.indexeddb.leveldb/000006.log 
+2022/12/10-19:18:30.172 27583 Level-0 table #10: started
+2022/12/10-19:18:30.195 27583 Level-0 table #10: 1267622 bytes OK
+2022/12/10-19:18:30.198 27583 Delete type=0 #6
