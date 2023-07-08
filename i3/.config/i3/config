@@ -26,7 +26,7 @@ font pango:Font Awesome, Futura Bk Bt Bold 10
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 exec picom --vsync --backend glx
-exec nvidia-settings --load-config-only
+#exec nvidia-settings --load-config-only
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -71,9 +71,10 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 # start rofi run
-bindsym $mod+d exec rofi -show drun
+#bindsym $mod+d exec rofi -show drun
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher.sh
 
 # change focus
 #bindsym $mod+j focus left
@@ -209,8 +210,18 @@ exec feh --bg-scale --zoom fill ~/Pictures/wp.jpg
 #	status_command i3status
 #}
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh --material
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh --material
 
-bindsym $mod+l exec "~/.local/bin/lock.sh"
-exec xautolock -time 15 -locker '~/.local/bin/lock.sh' &
+#bar {
+#    status_command i3status
+#}
+
+bar {
+	status_command i3blocks
+}
+
+bindsym $mod+l exec "~/bin/lock.sh"
+exec xautolock -time 15 -locker '~/bin/lock.sh' &
 exec dunst -conf ~/.config/dunst/dunstrc &
+exec xinput set-prop "ELAN050A:00 04F3:3158 Touchpad" "libinput Tapping Enabled" 1
+exec xinput set-prop "ELAN050A:00 04F3:3158 Touchpad" "libinput Disable While Typing Enabled" 0
